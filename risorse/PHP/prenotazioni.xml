@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prenotazioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="prenotazioni.xsd">
+  <prenotazione id="1">
+    <id_utente>1</id_utente>
+    <id_visita>1</id_visita>
+  </prenotazione>
+  
+  <prenotazione id="3">
+    <id_utente>1</id_utente>
+    <id_visita>5</id_visita>
+  </prenotazione>
+  <prenotazione id="4">
+    <id_utente>1</id_utente>
+    <id_visita>6</id_visita>
+  </prenotazione>
+  <prenotazione id="5">
+    <id_utente>1</id_utente>
+    <id_visita>7</id_visita>
+  </prenotazione>
+  <prenotazione id="6">
+    <id_utente>2</id_utente>
+    <id_visita>1</id_visita>
+  </prenotazione>
+  <prenotazione id="7">
+    <id_utente>2</id_utente>
+    <id_visita>8</id_visita>
+  </prenotazione>
+  <prenotazione id="8">
+    <id_utente>2</id_utente>
+    <id_visita>6</id_visita>
+  </prenotazione>
+  <prenotazione id="9">
+    <id_utente>2</id_utente>
+    <id_visita>5</id_visita>
+  </prenotazione>
+  <prenotazione id="10">
+    <id_utente>2</id_utente>
+    <id_visita>4</id_visita>
+  </prenotazione>
+  <prenotazione id="11">
+    <id_utente>1</id_utente>
+    <id_visita>2</id_visita>
+  </prenotazione>
+  <prenotazione id="12">
+    <id_utente>1</id_utente>
+    <id_visita>4</id_visita>
+  </prenotazione>
+  <prenotazione id="13">
+    <id_utente>2</id_utente>
+    <id_visita>3</id_visita>
+  </prenotazione>
+  <prenotazione id="14">
+    <id_utente>1</id_utente>
+    <id_visita>2</id_visita>
+  </prenotazione>
+</prenotazioni>

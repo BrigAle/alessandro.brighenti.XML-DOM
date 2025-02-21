@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <xsd:element name="visite">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="visita" maxOccurs="unbounded" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="visita">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="nome" />
+                <xsd:element ref="data" />
+                <xsd:element ref="ora" />
+            </xsd:sequence>
+            <xsd:attribute name="id" type="xsd:integer" use="required" />
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="nome">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+                <xsd:enumeration value="Archeologico"></xsd:enumeration>
+                <xsd:enumeration value="Naturalistico"></xsd:enumeration>
+                <xsd:enumeration value="Storico-Artistico"></xsd:enumeration>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:element>
+    <xsd:element name="data" type="xsd:date" />
+    <xsd:element name="ora">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+                <xsd:pattern value="(0[0-9]|1[0-9]|2[0-3]):([0-5][0-9])" />
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:element>
+</xsd:schema>
