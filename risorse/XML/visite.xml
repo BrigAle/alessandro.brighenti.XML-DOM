@@ -15,29 +15,4 @@
     <data>2025-03-02</data>
     <ora>14:09</ora>
   </visita>
-  <visita id="4">
-    <nome>Naturalistico</nome>
-    <data>2025-03-02</data>
-    <ora>15:12</ora>
-  </visita>
-  <visita id="5">
-    <nome>Storico-Artistico</nome>
-    <data>2025-02-13</data>
-    <ora>22:05</ora>
-  </visita>
-  <visita id="6">
-    <nome>Naturalistico</nome>
-    <data>2025-02-28</data>
-    <ora>23:05</ora>
-  </visita>
-  <visita id="7">
-    <nome>Storico-Artistico</nome>
-    <data>2025-02-06</data>
-    <ora>22:10</ora>
-  </visita>
-  <visita id="8">
-    <nome>Naturalistico</nome>
-    <data>2025-02-26</data>
-    <ora>15:37</ora>
-  </visita>
 </visite>

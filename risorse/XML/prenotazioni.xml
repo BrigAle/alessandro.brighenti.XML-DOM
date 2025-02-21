@@ -4,4 +4,12 @@
     <id_utente>1</id_utente>
     <id_visita>1</id_visita>
   </prenotazione>
+  <prenotazione id="2">
+    <id_utente>1</id_utente>
+    <id_visita>2</id_visita>
+  </prenotazione>
+  <prenotazione id="3">
+    <id_utente>1</id_utente>
+    <id_visita>5</id_visita>
+  </prenotazione>
 </prenotazioni>
