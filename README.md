@@ -42,9 +42,10 @@ Struttura del progetto:
         immagini: cartella che contiene le immagini utilizzate nel sito
 
         PHP: La cartella PHP contiene i file di logica e di gestione per il backend del sito. 
-        I file PHP in questa cartella si occupano delle operazioni sul database, come la gestione delle sessioni utente, 
-        l'autenticazione, la prenotazione delle visite e l'eliminazione delle prenotazioni.
-        Inoltre, vengono utilizzate query MySQL per inserire, eliminare, lettura dati nel database.
+        I file PHP in questa cartella si occupano delle operazioni sul database, come la gestione 
+        delle sessioni utente, l'autenticazione, la prenotazione delle visite e l'eliminazione 
+        delle prenotazioni. Inoltre, vengono utilizzate query MySQL per inserire, eliminare, 
+        lettura dati nel database.
 
 
 Validazione del sito:
