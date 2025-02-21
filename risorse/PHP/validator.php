@@ -15,6 +15,6 @@ if($docV->schemaValidate('../XML/visite.xsd')){
     echo 'il file visite è valido';
 }
 else{
-    echo 'il file prenotazioni non è valido';
+    echo 'il file visite non è valido';
 }
 ?>
