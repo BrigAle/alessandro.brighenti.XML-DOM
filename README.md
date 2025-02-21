@@ -23,9 +23,9 @@ Caratteristiche Principali del Sito:
     Il database, creato da install.php, include due utenti predefiniti.
 
 -Aggiungere Visite:
-    L'utente con il ruolo di admin (con la password predefinita "admin") ha il privilegio di aggiungere nuove visite al database.
-    Per accedere a queste funzionalità, l'utente deve inserire le credenziali di login (username e password) nel form di accesso. 
-    Solo un utente autenticato come admin potrà accedere alla sezione di aggiunta delle visite.
+    L'utente con il ruolo di admin (con la password predefinita "admin") ha il privilegio di aggiungere 
+    nuove visite al database. Per accedere a queste funzionalità, l'utente deve inserire le credenziali di login (username e password) 
+    nel form di accesso. Solo un utente autenticato come admin potrà accedere alla sezione di aggiunta delle visite.
 
 - Visualizzazione e gestione delle prenotazioni:
     Gli utenti possono consultare le visite prenotate nella pagina dedicata.
