@@ -86,6 +86,7 @@ $xmlVisite = simplexml_load_file($xmlFile2);
                     
                     $numPrenotazioni=0;
                     $id = (int)$_SESSION['id'];
+                    // ciclo per contare il numero di prenotazioni effettuate dall'utente loggato
                     foreach($xmlPrenotazioni as $prenotazione1){
                         $idP = (int)$prenotazione1->id_utente;
                         if($id===$idP)
@@ -96,7 +97,8 @@ $xmlVisite = simplexml_load_file($xmlFile2);
                             echo "<h2>" . $_SESSION['delete'] . "</h2>";
                             unset($_SESSION['delete']);
                         }
-                        //ciclo per stampare i dati
+                        // ciclo per stampare le prenotazioni dell'utente loggato
+                        
                         echo "<div class=\"box_prenotazione\">";
                         foreach ($xmlPrenotazioni as $prenotazione):
                             $id_utente = (int)$prenotazione->id_utente;
@@ -104,6 +106,7 @@ $xmlVisite = simplexml_load_file($xmlFile2);
                             $id_prenotazione = (int)$prenotazione->attributes()->id;
                             foreach ($xmlVisite as $visita):
                                 $idV = (int)$visita->attributes()->id;
+                                // vengono mostrate solo le visite prenotate dall'utente loggato
                                 if ($idV == $id_visita && $id_utente == $_SESSION['id']):
                                     $nome = (string)$visita->nome;
                                     $data = (string)$visita->data;

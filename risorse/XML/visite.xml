@@ -15,4 +15,9 @@
     <data>2025-03-02</data>
     <ora>14:09</ora>
   </visita>
+  <visita id="4">
+    <nome>Naturalistico</nome>
+    <data>2025-02-23</data>
+    <ora>16:33</ora>
+  </visita>
 </visite>

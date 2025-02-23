@@ -15,9 +15,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_SESSION['ruolo']) && $_SESSI
     $tipologia_visita = $_POST['tipologia_visita'];
     $ora_visita = $_POST['ora_visita'];
 
+    // Carica l'XML
     $xmlFile = "../XML/visite.xml";
 
-    // Carica l'XML
     if (!file_exists($xmlFile)) {
         die("Errore: Il file XML non esiste.");
     }
@@ -71,12 +71,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_SESSION['ruolo']) && $_SESSI
     //  Formatto il file XML in modo leggibile
     $doc->formatOutput = true;
 
-    // Salva il file XML correttamente formattato
+    // Salvo e formatto il file 
     $xmlFormatted = $doc->saveXML();
     // Scrivo il contenuto nel file XML
     file_put_contents($xmlFile, $xmlFormatted);
 
-    // ritorno alla pagina
+    // eseguo una ricerca semplice per verificare se e' stata aggiunta la visita
+    $xmlRicerca = simplexml_load_file($xmlFile);
+    $idVisitaAggiunta = $idUltimaVisita + 1;
+    $_SESSION['visitaAggiunta']=false;
+    foreach($xmlRicerca->visita as $visita){
+        if((int)$idVisitaAggiunta===(int)$visita['id']){
+            $_SESSION['visitaAggiunta']=true;
+            break;
+        }
+    }
+    
+    // ritorno al form
     header('Location: ../../aggiungiVisita.php');
     exit;
 }

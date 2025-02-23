@@ -20,21 +20,22 @@ if (isset($_POST['id_prenotazione'])) {
     $doc->formatOutput = true;
     $doc->load($xmlFile);
 
-    $root = $doc->documentElement;
-    $prenotazioni = $doc->getElementsByTagName('prenotazione');
-
+    $prenotazioni = $doc->documentElement;
+    $elencoPrenotazioni = $doc->getElementsByTagName('prenotazione');
+    $id = 0;
     $eliminato = false; // Inizializzazione variabile
-
-    foreach ($prenotazioni as $prenotazione) {
-        $id = $prenotazione->getAttribute('id');
-        if ((string)$id === (string)$id_daEliminare) {  
-            $root->removeChild($prenotazione);
-            $doc->save($xmlFile); // Usa il percorso corretto
-            $eliminato = true;
-            break;
+    // ricerca del nodo prenotazione da eliminare
+    foreach ($elencoPrenotazioni as $prenotazione) {
+        if($prenotazione->hasAttribute('id')) {
+            $id = $prenotazione->getAttribute('id');
+            if ((int)$id === (int)$id_daEliminare) {  
+                $prenotazioni->removeChild($prenotazione);
+                $doc->save($xmlFile); // Usa il percorso corretto
+                $eliminato = true;
+                break;
+            }
         }
     }
-
     $_SESSION['delete'] = "Prenotazione eliminata con successo.";
     header("Location: ../../prenotazioniEffettuate.php");
     exit();

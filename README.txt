@@ -7,10 +7,11 @@ Repository:
 https://github.com/BrigAle/alessandro.brighenti.XML-DOM
 
 Descrizione del Progetto:
-Il progetto si basa sull’esercizio sviluppato nel secondo Homework ma con XML-DOM.
+Il progetto si basa sull’esercizio sviluppato nel secondo Homework, con l'integrazione di XML-DOM.
 Il sito web include diverse pagine in PHP, tra cui:
 install.php: un file che consente di creare il database nel caso in cui non fosse già presente.
-connection.php: un file utilizzato per stabilire la connessione al database ogni volta che è necessario effettuare operazioni.
+connection.php: un file utilizzato per stabilire la connessione al database ogni volta che è necessario effettuare operazioni. 
+E' stato scelto di utilizzare un file xml per ogni tabella di dati, ad ogni file XML viene associato un file xsd per le regole di schema.
 
 Caratteristiche Principali del Sito:
 
@@ -24,7 +25,7 @@ Caratteristiche Principali del Sito:
 
 -Aggiungere Visite:
     L'utente con il ruolo di admin (con la password predefinita "admin") ha il privilegio di aggiungere 
-    nuove visite al database. Per accedere a queste funzionalità, l'utente deve inserire le credenziali di login (username e password) 
+    nuove visite al database XML. Per accedere a queste funzionalità, l'utente deve inserire le credenziali di login (username e password) 
     nel form di accesso. Solo un utente autenticato come admin potrà accedere alla sezione di aggiunta delle visite.
 
 - Visualizzazione e gestione delle prenotazioni:
@@ -47,9 +48,12 @@ Struttura del progetto:
         delle prenotazioni. Inoltre, vengono utilizzate query MySQL per inserire, eliminare, 
         lettura dati nel database.
 
+        XML: Contiene i dati del progetto in formato XML.Ogni file XML ha un corrispondente 
+        file XSD per la definizione dello schema.
+
 
 Validazione del sito:
-I file sono stati validati utilizzando il sito W3C Validator (https://validator.w3.org/check). 
+I file php sono stati validati utilizzando il sito W3C Validator (https://validator.w3.org/check), mentre i file xml sono stati validati su https://www.xmlvalidation.com/.
 Le pagine Homepage.php, Contatti.php, info.php e galleria.php sono state modificate per essere conformi alla specifica HTML 1.0 Strict.
 Per gli altri file, sono emersi alcuni errori, come ad esempio:
     Il metodo POST deve essere scritto in minuscolo, come post o get.
@@ -57,3 +61,5 @@ Per gli altri file, sono emersi alcuni errori, come ad esempio:
     I placeholder devono includere un valore per essere correttamente definiti.
     Deve essere incluso il tag di chiusura (/>) per gli elementi input.
     È necessario utilizzare il tag di chiusura per gli elementi br, ovvero <br />.
+
+

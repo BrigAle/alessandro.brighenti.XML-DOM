@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <prenotazioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="prenotazioni.xsd">
-  <prenotazione id="1">
-    <id_utente>1</id_utente>
-    <id_visita>1</id_visita>
-  </prenotazione>
-  <prenotazione id="2">
-    <id_utente>1</id_utente>
-    <id_visita>2</id_visita>
-  </prenotazione>
   <prenotazione id="3">
     <id_utente>1</id_utente>
     <id_visita>5</id_visita>
+  </prenotazione>
+  <prenotazione id="7">
+    <id_utente>1</id_utente>
+    <id_visita>2</id_visita>
+  </prenotazione>
+  <prenotazione id="8">
+    <id_utente>1</id_utente>
+    <id_visita>1</id_visita>
   </prenotazione>
 </prenotazioni>

@@ -64,8 +64,8 @@ session_start();
 
             <div class="contenuto" style="background-color: lightgreen;">
 
-                <!-- Inserisco un controllo in PHP per verificare se l'utente amministratore è loggato, 
-                        al fine di impedire l'accesso alla pagina senza i giusti permessi. -->
+                <!-- Inserisco un controllo in PHP per verificare se l'amministratore è loggato, 
+                        per impedire l'accesso alla pagina senza i giusti permessi. -->
                 <?php
                     if (isset($_SESSION['ruolo']) && $_SESSION['ruolo'] == 2):
                 ?>
@@ -90,7 +90,7 @@ session_start();
                             echo "<h3 style='color: green;'>Visita aggiunta con successo</h3>";
                             unset($_SESSION['visitaAggiunta']);
                         }elseif(isset($_SESSION['visitaAggiunta']) && $_SESSION['visitaAggiunta'] == 'false'){
-                            echo "<h3 style='color: red;'>Visita aggiunta con successo</h3>";
+                            echo "<h3 style='color: red;'>La visita non e' stata aggiunta</h3>";
                             unset($_SESSION['visitaAggiunta']);
                         }
                     ?>
