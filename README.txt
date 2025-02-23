@@ -9,11 +9,11 @@ https://github.com/BrigAle/alessandro.brighenti.XML-DOM
 Descrizione del Progetto:
 Il progetto si basa sull’esercizio sviluppato nel secondo Homework, con l'integrazione di XML-DOM.
 Il sito web include diverse pagine in PHP, tra cui:
-install.php: un file che consente di creare il database nel caso in cui non fosse già presente.
-connection.php: un file utilizzato per stabilire la connessione al database ogni volta che è necessario effettuare operazioni. 
-E' stato scelto di utilizzare un file xml per ogni tabella di dati, ad ogni file XML viene associato un file xsd per le regole di schema.
-
-Caratteristiche Principali del Sito:
+- install.php: consente di creare il database per la gestione degli utenti nel caso in cui non fosse già presente.
+- connection.php: stabilisce la connessione al database per le operazioni necessarie.
+Per garantire una migliore leggibilità dei dati, è stato scelto di assegnare a ciascun file XML una tabella di dati, 
+ad eccezione della tabella degli utenti, che viene gestita direttamente tramite il database. 
+A ogni file XML è associato un file schema XSD corrispondente per la validazione.
 
 - Sistema di registrazione e login:
     Gli utenti possono registrarsi e accedere al sito.
@@ -37,19 +37,22 @@ Struttura del progetto:
 -Pagine XHTML con PHP: contengono principalmente l'aspetto visivo, la struttura della pagina e l'interazione dell'utente
 
 -Cartella risorse:
-    Una cartella che contiene tutte le risorse statiche e i file di supporto per il sito. Al suo interno, troviamo:
+        Una cartella che contiene tutte le risorse statiche e i file di supporto per il sito. 
+        Al suo interno, troviamo:
+        
+            CSS: stile per l'aspetto grafico del sito
+            immagini: cartella che contiene le immagini utilizzate nel sito
 
-        CSS: stile per l'aspetto grafico del sito
-        immagini: cartella che contiene le immagini utilizzate nel sito
+            PHP: La cartella PHP contiene i file di logica e di gestione per il backend del sito. 
+            I file PHP in questa cartella si occupano delle operazioni sul database e sui file XML, come la gestione 
+            delle sessioni utente, l'autenticazione la prenotazione delle visite e l'eliminazione 
+            delle prenotazioni. E' inoltre presente un file validator.php in grado di controllare se i file XML 
+            seguono lo schema corrispondente. 
 
-        PHP: La cartella PHP contiene i file di logica e di gestione per il backend del sito. 
-        I file PHP in questa cartella si occupano delle operazioni sul database, come la gestione 
-        delle sessioni utente, l'autenticazione, la prenotazione delle visite e l'eliminazione 
-        delle prenotazioni. Inoltre, vengono utilizzate query MySQL per inserire, eliminare, 
-        lettura dati nel database.
-
-        XML: Contiene i dati del progetto in formato XML.Ogni file XML ha un corrispondente 
-        file XSD per la definizione dello schema.
+            XML: Contiene i dati del progetto in formato XML. Ogni file XML ha un corrispondente 
+            file XSD per la definizione dello schema. La gestione dei file XML avviene tramite 
+            DOMDocument(manipolazione dettagliata di ogni parte del documento XML.) e 
+            SimpleXML(Più semplice e intuitivo rispetto a DOM).
 
 
 Validazione del sito:
