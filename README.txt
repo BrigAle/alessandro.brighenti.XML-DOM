@@ -1,5 +1,3 @@
-# alessandro.brighenti.XML_DOM
- 
 Membri del gruppo:
 Alessandro Brighenti - brighenti.1783767@studenti.uniroma1.it
 
