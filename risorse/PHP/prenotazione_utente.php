@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $doc->loadXML($xmlString);
     
     $prenotazioni = $doc->documentElement;
-    // Creo un nuovo nodo prenotazione e gli aggiungo i nodi figli id_utente e id_visita
+    // Creo un nuovo nodo prenotazione e aggiungo i nodi figli id_utente e id_visita
     $prenotazione = $doc->createElement('prenotazione');
     $id_user = $doc->createElement('id_utente');
     $id_visit = $doc->createElement('id_visita');

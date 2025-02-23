@@ -30,7 +30,7 @@ if (isset($_POST['id_prenotazione'])) {
             $id = $prenotazione->getAttribute('id');
             if ((int)$id === (int)$id_daEliminare) {  
                 $prenotazioni->removeChild($prenotazione);
-                $doc->save($xmlFile); // Usa il percorso corretto
+                $doc->save($xmlFile); // Salva le modifiche
                 $eliminato = true;
                 break;
             }
