@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once 'connection.php';
-$connection = new mysqli('localhost', 'root', '', 'database_homework2');
+$connection = new mysqli($host, $user, $password, $db);
 
 if ($connection->connect_error) {
     die("Connessione fallita: " . $connection->connect_error);
